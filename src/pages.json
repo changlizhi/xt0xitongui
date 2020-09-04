@@ -1,16 +1,43 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
+			}
+		},{
+			"path": "pages/ml1ChuangJianCis/ml1ChuangJianCis",
+			"style": {
+				"navigationBarTitleText": "创建词"
 			}
 		}
 	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "tabBar": {
+      "color": "#666666",
+      "selectedColor": "#3773F8",
+      "backgroundColor": "#ffffff",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页"
+        }
+      ]
+    },
+    "globalStyle": {
+      "navigationBarTextStyle": "black",
+      "navigationBarTitleText": "系统生成管理",
+      "navigationBarBackgroundColor": "#fff6e7",
+      "backgroundColor": "#F8F8F8",
+      "backgroundColorTop": "#F4F5F6",
+      "backgroundColorBottom": "#F4F5F6",
+      "usingComponents": {},
+      "onReachBottomDistance":100
+    },
+    "usingComponts": true,
+    "permission": {
+      "scope.userLocation": {
+        "desc": "你的位置信息"
+      }
+    }
+  
 }
