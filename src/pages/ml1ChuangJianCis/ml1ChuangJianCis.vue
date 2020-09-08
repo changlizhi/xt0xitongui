@@ -48,17 +48,22 @@
   } from "vuex"
   import {
     exp_chuangJian
-  } from "../../qingqius/chuang_jian.js"
+  } from "@/js/qingqius/chuang_jian.js"
   import {
     mutationNames
-  } from "../../store/mutationNames.js"
+  } from "@/store/mutationNames.js"
   export default {
     methods: {
       xiuGai(){
         this.xiuGaiObj=JSON.parse(JSON.stringify(this.zhiDuObj))
       },
       tiJiao(){
-        console.error("this.xiuGaiObj---",this.xiuGaiObj)
+        let canShu = {
+          Jwt:"xxx.yyy.zzz",
+          YeWu:"TianJiaCis",
+          ShuJu:this.xiuGaiObj,
+        }
+        console.error("canShu---",canShu)
       },
     },
     data() {
@@ -95,9 +100,7 @@
       var [error, res] = await uni.request({
         url: "http://localhost:8888/hfxyonghu",
         method: "POST",
-        data: {
-          text: "uni.request"
-        },
+        data: "应该传入json对象",
       });
       console.log("res===", res);
     },

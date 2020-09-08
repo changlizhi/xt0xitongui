@@ -1,4 +1,4 @@
-import store from '../store/index.js'
+import store from '@/store/index.js'
 
 export const exp_chuangJian = {
   chuang_jian: chuang_jian,

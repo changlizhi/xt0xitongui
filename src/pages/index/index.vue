@@ -21,10 +21,10 @@
   } from 'vuex'
   import {
     exp_chuangJian
-  } from '../../qingqius/chuang_jian.js'
+  } from '@/js/qingqius/chuang_jian.js'
   import {
     mutationNames
-  } from '../../store/mutationNames.js'
+  } from '@/store/mutationNames.js'
   export default {
     methods: {
       toPage(uri){
